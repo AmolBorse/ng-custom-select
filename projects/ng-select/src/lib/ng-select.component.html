@@ -2,7 +2,7 @@
     <input type="text" name="searchTerm" tabindex="-1" [formControl]="searchTerm" [readonly]="!isDatalist" #searchInput>
     <span [class]="styleGuide?.caretClass" id="caret" [ngStyle]="{'right':positionRight}" [ngClass]="{'icon':!styleGuide?.caretClass}"></span>
     <ul [ngClass]="{'ng-dropdown-menu' : true}" [class]="styleGuide?.selectMenuClass">
-        <li *ngFor="let option of filterOptions" (click)="changeValue(option)" [class]="styleGuide?.optionsClass"  [ngClass]="{'selected': (item.value === option[displayKey] || item.value === option)}">
+        <li *ngFor="let option of filterOptions" (click)="changeValue(option)" [class]="styleGuide?.optionsClass"  [ngClass]="{'selected-option': (item.value === option[displayKey] || item.value === option)}">
             <span>{{option[displayKey] || option}}</span>
         </li>
     </ul>
